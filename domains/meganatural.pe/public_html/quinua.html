@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Meganatural</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/ico" href="./img/general/favicon.ico"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        @font-face {
+            font-family: "Raleway-Medium";
+            src: url("./fonts/Raleway-Medium.woff") format("woff"), /* Modern Browsers */
+                url("./fonts/Raleway-Medium.woff2") format("woff2"); /* Modern Browsers */
+            font-weight: medium;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: "Raleway-Bold";
+            src: url("./fonts/Raleway-Bold.woff") format("woff"), /* Modern Browsers */
+                url("./fonts/Raleway-Bold.woff2") format("woff2"); /* Modern Browsers */
+            font-weight: bold;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: "SwingMTStd-Bold";
+            src: url("./fonts/SwingMTStd-Bold.woff") format("woff"), /* Modern Browsers */
+                url("./fonts/SwingMTStd-Bold.woff2") format("woff2"); /* Modern Browsers */
+            font-weight: bold;
+            font-style: normal;
+        }
+        body{
+            background-color: white;
+            background-repeat:no-repeat;
+        }
+        header{
+            background-color:#c2bbad;
+            font-family: "Raleway-Bold";
+        }
+        #logoWeb{
+            width:100px;
+            height:85px;
+        }
+        .nav-link{
+            color:white !important;
+        }
+        .nav-link:hover{
+            color:#4ea147 !important; 
+        }
+        .navbar-light .navbar-toggler {
+            border-color: rgba(0,0,0,0);
+        }
+        #miracomofloto{
+            display:block;
+        }
+
+        /* Contenido de la pagina */
+
+        #aboutUs{
+            background-image:url("https://meganatural.pe/img/about-us.jpg");
+            background-repeat:no-repeat;
+            background-size:cover;
+            height:100%;
+        }
+        .img{
+            top:50%; 
+            left:50%; 
+            transform: translate(-50%, -50%);  
+            font-size:1.8rem
+        }
+        #contactUs{
+            background-color: rgba(0,0,0,.2);
+        }
+        #quinua2{
+            width:50%;
+        }
+        
+        
+        /* Media queries */
+
+        /* xl */
+        @media(min-width: 1200px){
+            .carousel-item>.w-100{
+                height:80vh;
+            }
+            .logo{
+                width:100px;
+                height:85px;
+                margin-top:20vh;
+            }
+            #content-about-us{
+                margin-top:10vh;
+                margin-bottom:30vh;
+                font-size: 1.2rem;
+            }
+            #miracomofloto{
+                background-color: rgba(194, 187, 173, 0.7)
+            }
+            #quinua2-texto{
+                margin-right: 10vh;
+                margin-left:10vh;
+            }
+        }
+
+        /* lg */
+        @media(min-width: 992px) and (max-width: 1199px){ 
+			.carousel-item>.w-100{
+                height:80vh;
+            }
+            header{
+                font-size:0.8rem;
+            }
+            .logo{
+                width:100px;
+                height:85px;
+                margin-top:20vh;
+            }
+            #content-about-us{
+                color:white;
+                margin-top:40vh;
+                margin-bottom:30vh;
+                margin-top:20vh;
+            }
+            #miracomofloto{
+                background-color: rgba(194, 187, 173, 0.7)
+            }
+		}
+
+        /* md */
+		@media(max-width: 991px) and (min-width:768px ){
+			#content-about-us{
+                color:white;
+                margin-top:30vh;
+                margin-bottom:30vh;
+            }
+            #logoMovil{
+                width:55px;
+                height:50px;   
+                margin-left:35%;
+            }
+            .logo{
+                width:90px;
+                height:75px;
+                margin-top:5vh;
+            }
+		}
+
+        /* sm */
+		@media(max-width: 767px) and (min-width:547px ){
+            .collapse{
+                display:none;
+            }
+            #logoMovil{
+                width:100px;
+                height:80px;   
+                margin-left:34%;
+            }
+            .logo{
+                width:70px;
+                height:60px;
+                margin-top:5vh;
+            }
+            #content-about-us{
+                color:white;
+                margin-top:20vh;
+                margin-bottom:30vh;
+            }
+            #quinua{ 
+                width: 80%;
+            }
+            #tara{ 
+                width: 80%;
+            }
+            #quinua2{
+                width:100%;
+            }
+        }
+
+        /* xs */
+        @media(max-width: 546px){
+			.collapse{
+                display:none;
+            }
+            #logoMovil{
+                width:55px;
+                height:50px;   
+                margin-left:27%;
+            }
+            .carousel{
+                height:100%;
+            }
+            #content-about-us{
+                color:white;
+                margin-bottom:10vh;
+            }
+            .logo{
+                width:70px;
+                height:60px;
+                margin-top:10vh;
+            }
+            #miracomofloto>.row>button{
+                background-color:rgba(194, 187, 173, 0.7)
+            }
+            #navbarFlotante{
+                margin-top:15vh;
+            }
+            .detallesFlotante{
+                background-color:rgba(194, 187, 173, 1);
+                height: 100%;
+            }
+            #quinua{ 
+                width: 80%;
+            }
+            #tara{ 
+                width: 80%;
+            }
+            .img{
+                top:55%; 
+                left:50%; 
+                transform: translate(-50%, -50%);  
+                font-size:1rem
+            }
+            #quinua2{
+                width: 100%;
+            }
+		}	
+    </style>
+</head>
+<body>
+<header>
+    <div class="navbar navbar-expand-lg navbar-dark d-block" id="inicio">
+        <div class="row justify-content-center d-none d-lg-flex">
+            <div class="col-2 my-2">
+                <img class="mx-auto d-block" id="logoWeb" src="img/logo-white-2.png">
+            </div>
+        </div>
+        <div class="row">
+            <button class="navbar-toggler col-2" id="buttonInfinity" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-haspopup="true" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon text-light d-lg-none"></span>
+            </button>
+            <div class="col-10 d-lg-none my-2">
+                <img id="logoMovil" class="d-block" src="img/logo-white-2.png">
+            </div>
+            <div class="navbar-collapse collapse" id="navbarNav">
+                <ul class="justify-content-center mx-auto navbar-nav text-center">
+                    <li class="nav-item">
+                        <a class="nav-link mx-3" href="./index.html"> H O M E</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-3" href="./index.html#aboutUs">A B O U T &nbsp; U S</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-3" href="./index.html">A W A R D S</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-3" href="./index.html">V A L U E S</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-3" href="./index.html#ourProducts">O U R &nbsp; P R O D U C T S</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-3" href="./index.html">G I V I N G</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-3" href="./index.html#contactUs">C O N T A C T &nbsp; U S</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mira como floto :3 -->
+    <div id="miracomofloto" class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="row">
+            <button class="navbar-toggler col-2 ml-3 mt-3" id="buttonFlotante" type="button" data-toggle="collapse" data-target="#navbarFlotante" aria-controls="navbarFlotante" aria-expanded="false" aria-haspopup="true" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon text-light d-lg-none"></span>
+            </button>
+            <div class="navbar-collapse collapse" id="navbarFlotante">
+                <ul class="justify-content-center mx-auto navbar-nav text-center">
+                    <li class="nav-item">
+                        <a class="nav-link mx-3" href="#inicio"> H O M E</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-3" href="#aboutUs">A B O U T &nbsp; U S</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-3" href="#inicio">A W A R D S</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-3" href="#inicio">V A L U E S</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-3" href="#ourProducts">O U R &nbsp; P R O D U C T S</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-3" href="#inicio">G I V I N G</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-3" href="#contactUs">C O N T A C T &nbsp; U S</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<!-- Quinua -->
+
+<div class="container text-center px-lg-5 mx-auto" id="quinua">
+    <img src="./img/quinua1.png" class="w-100 rounded" alt="" style="margin-top:10vh;" id="quinua1">
+    <h3 style="color:#1f1647; font-family: 'Raleway-Bold';" class="my-5">QUINUA Chenopodium quinoa Willd</h3>
+    <p style="color:rgba(0,0,0,.5);" class="text-justify">Es una planta andina procedente de los alrededores del lago Titicaca, ubicado en Perú y Bolivia. En el Perú se cultiva en la Sierra. La quinua contiene proteínas, aminoácidos escenciales, fibra, y carbohidratos es por ello que es considerado un superalimento. </p>
+    
+    <!-- <img src="./img/quinua2.png" class="rounded" alt="" style="margin-top:10vh;" id="quinua2">
+    <h3 style="color:#1f1647; font-family: 'Raleway-Bold';" class="my-5">QUINUA BLANCA ORGANICA</h3>
+    <div class="row no-gutters" id="quinua2-texto">
+        <div class="col-6 text-left">Parte utilizada: Grano</div>
+        <div class="col-6 text-left">Región: Costa y Sierra del Perú</div>
+        <div class="col-12">Usos y aplicaciones: alimento perfecto para celíacos</div>
+        <div class="col-12">Origen: Cajamarca, Ayacucho, Arequipa, etc.</div>
+        <div class="col-12">Propiedades: aminoácidos, fibra, glucosilonatos, proteína, vitaminas</div>
+        <div class="col-12">Presentación: 200 gramos, 25 kilogramos</div>
+    </div> -->
+
+    <div class="row my-5" style="font-family: 'SwingMTStd-Bold'">
+        <div class="col-6 offset-3 position-relative d-inline-block text-center">
+            <img src="./img/marco.png" id="tara" alt="Tara">
+            <div class="position-absolute img"><a href="#inicio" style="text-decoration: none; color: #563e2f">Derivados<br>Tara</a></div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Contact Us -->
+<div id="contactUs">
+    <div class="container text-center px-lg-5">
+        <img class="rounded mb-5 logo" src="https://meganatural.pe/img/logo-sin-nombre.png ">
+        <h3 style="font-family:'Raleway-Bold';color:#4ea147;font-size:20px; padding-bottom: 10vh;">Contact Us</h3>
+        <button type="button" class="btn btn-light" style="margin-bottom:10vh;">Contact</button>
+    </div>
+</div>
+
+<!-- Email -->
+
+<div id="email" style="background-color: #1f1f1f;">
+    <div class="container text-center px-lg-5">
+        <img class="rounded mb-5 logo" src="https://meganatural.pe/img/logo-sin-nombre.png ">
+        <h3 style="font-family:'Raleway-Bold';font-size:20px;" class="text-white">Email</h3>
+        <p class="text-white m-0 pt-3" style="font-size:20px;padding-bottom: 20vh;">mega.natural.sac@gmail.com</p>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script>
+    $(function(){
+        var $flotante = $('#miracomofloto');
+        $flotante.hide();
+        var altura = $('#quinua2').offset().top;
+        // Scroll
+        $(window).scroll(function()
+        {
+            if ($(window).scrollTop() >= altura )
+            {
+                $flotante.show();
+                console.log('Ahora me ves');
+            }
+            else
+            {
+                $flotante.hide();
+                console.log('Ahora no me ves');
+            }
+        });
+        $('#buttonFlotante').click(function(){
+            $('#miracomofloto').toggleClass('detallesFlotante');
+            if($('html').css('overflow')=='hidden'){
+                $('html').css({
+                    'overflow': 'auto',
+                    'height': 'auto'
+                });
+            }else{
+                $('html').css({
+                    'overflow': 'hidden',
+                    'height': '100%'
+                });
+            }
+        });
+        $('#navbarFlotante').click(function(){
+            if($('#miracomofloto').hasClass('detallesFlotante')){
+                $flotante.hide();
+                $('#buttonFlotante').trigger('click');
+            } 
+        });
+
+
+        //Este es el desplazamiento vertical bien xvr
+        // Select all links with hashes
+        $('a[href*="#"]')
+        // Remove links that don't actually link to anything
+        .not('[href="#"]')
+        .not('[href="#0"]')
+        .not('[href="#carousel"]')
+        .click(function(event) {
+            // On-page links
+            if (
+            location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+            && 
+            location.hostname == this.hostname
+            ) {
+            // Figure out element to scroll to
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            // Does a scroll target exist?
+            if (target.length) {
+                // Only prevent default if animation is actually gonna happen
+                event.preventDefault();
+                $('html, body').animate({
+                scrollTop: target.offset().top
+                }, 1000, function() {
+                // Callback after animation
+                // Must change focus!
+                var $target = $(target);
+                $target.focus();
+                if ($target.is(":focus")) { // Checking if the target was focused
+                    return false;
+                } else {
+                    $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+                    $target.focus(); // Set focus again
+                };
+                });
+            }
+            }
+        });
+    });
+</script>
+</body>
+</html>
